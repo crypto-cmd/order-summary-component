@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display";
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: url("../../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container {
+  height: 90%;
+  max-width: 95vw;
+  aspect-ratio: 10/16;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.002), 0 6.7px 5.3px rgba(0, 0, 0, 0.008), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 1440px) {
+  .container {
+    height: 95%;
+    aspect-ratio: 7/10;
+  }
+}
+
+.hero {
+  width: 100%;
+}
+.hero img {
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+@media (min-width: 1440px) {
+  .info {
+    padding: 0 1.5rem;
+  }
+}
+.info .title {
+  font-weight: 900;
+  margin: 1rem 0;
+  color: #1f2f56;
+}
+.info .summary {
+  text-align: center;
+  color: #7280a7;
+  margin-bottom: 1rem;
+}
+.info .music-player {
+  width: 100%;
+  display: flex;
+  background-color: #f5f7ff;
+  padding: 1rem;
+  border-radius: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.info .music-player .left-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+}
+.info .music-player .left-wrapper > :first-child {
+  margin-right: 0.6rem;
+}
+.info .music-player .offer {
+  display: flex;
+  flex-direction: column;
+}
+.info .music-player .offer > :first-child {
+  color: #1f2f56;
+  font-weight: 700;
+}
+.info .music-player .offer > :last-child {
+  color: #7280a7;
+}
+.info .music-player .change-btn {
+  width: fit-content;
+  text-decoration: underline;
+  color: #3829e0;
+  font-weight: 700;
+  justify-content: flex-end;
+  align-items: center;
+}
+.info .music-player .change-btn:hover {
+  text-decoration: none;
+}
+.info .payment-btn {
+  background-color: #3829e0;
+  color: white;
+  margin-bottom: 1rem;
+}
+.info .payment-btn:hover {
+  box-shadow: 22px 21px 29px -14px #3829e0;
+}
+.info .cancel-btn {
+  background-color: transparent;
+  color: #7280a7;
+}
+.info .cancel-btn:hover {
+  color: #1f2f56;
+}
+
+/*# sourceMappingURL=main.css.map */

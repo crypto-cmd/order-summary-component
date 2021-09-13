@@ -1,0 +1,132 @@
+@use "variables";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: variables.$base-font-family;
+  box-sizing: border-box;
+}
+:root {
+  font-size: variables.$base-font-size;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: url("../../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container {
+  height: 90%;
+  max-width: 95vw;
+  aspect-ratio: 10/16;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.002),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.008), 0 100px 80px rgba(0, 0, 0, 0.12);
+  @media (min-width: variables.$desktop-width) {
+    height: 95%;
+    aspect-ratio: 7/10;
+  }
+}
+.hero {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+.btn {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  font-weight: variables.$font-weight-medium;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 1.5rem;
+  }
+  .title {
+    font-weight: variables.$font-weight-bold;
+    margin: 1rem 0;
+    color: variables.$neutral-color-dark-blue;
+  }
+  .summary {
+    text-align: center;
+    color: variables.$neutral-color-desaturated-blue;
+    margin-bottom: 1rem;
+  }
+  .music-player {
+    width: 100%;
+    display: flex;
+    background-color: variables.$neutral-color-pale-blue;
+    padding: 1rem;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    .left-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: fit-content;
+      > :first-child {
+        margin-right: 0.6rem;
+      }
+    }
+    .offer {
+      display: flex;
+      flex-direction: column;
+
+      > :first-child {
+        color: variables.$neutral-color-dark-blue;
+        font-weight: variables.$font-weight-medium;
+      }
+      > :last-child {
+        color: variables.$neutral-color-desaturated-blue;
+      }
+    }
+    .change-btn {
+      width: fit-content;
+      &:hover {
+        text-decoration: none;
+      }
+      text-decoration: underline;
+      color: variables.$primary-color-bright-blue;
+      font-weight: variables.$font-weight-medium;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  .payment-btn {
+    background-color: variables.$primary-color-bright-blue;
+    color: white;
+    margin-bottom: 1rem;
+    &:hover {
+      box-shadow: 22px 21px 29px -14px variables.$primary-color-bright-blue;
+    }
+  }
+  .cancel-btn {
+    background-color: transparent;
+    color: variables.$neutral-color-desaturated-blue;
+    &:hover {
+      color: variables.$neutral-color-dark-blue;
+    }
+  }
+}
